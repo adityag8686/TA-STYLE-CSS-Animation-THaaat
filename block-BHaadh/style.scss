@@ -1,0 +1,156 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    font-size: 24px;
+    background-color: aliceblue;
+}
+// header
+h1{
+    font-size: 34px;
+    border: 1px solid gray;
+    text-align: center;
+    background-color: aqua;
+    padding: 1rem 0;
+    color: brown;
+}
+// main section
+
+.cube-2d {
+    margin-top: 4rem;
+    margin-right: 50rem;
+    max-width: 300px;
+    padding-left: 10rem;
+	position: relative;
+	animation-name: rotate;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+
+.box-2d {
+	width: 200px;
+    height: 200px;  
+	position: absolute; 
+}
+.b1 {
+    border: 2px solid  wheat;
+    box-shadow: 2px 1px 6px green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg) skew(15deg,15deg) ;
+}
+.b2{
+    border: 2px solid  wheat;
+    box-shadow: 2px 1px 6px green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(15deg) skew(15deg, 15deg) translate(-50%,100%);
+}
+.b3 {
+    border: 2px solid  wheat;
+    box-shadow: 2px 1px 6px green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%,100%);
+}
+@keyframes rotate{
+	0%{
+		transform: rotate3d(0,0,0,0);
+	}
+	100%{
+		transform: rotate3d(0,2,2,180deg);
+	}
+}
+//3d cube
+.outer-box {
+    top: 64%;
+    left: 70%;
+    position: absolute;
+    perspective: 800px;
+}
+.cube-3d{
+	position: relative;
+    transform-style: preserve-3d;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.box-3d {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	border: 2px solid chocolate;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.one {
+    transform: translateX(-200px) translateY(-200px) translateZ(200px);
+	box-shadow: 2px 1px 6px green;
+}
+.two {
+    transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+	box-shadow: 2px 1px 6px green;
+}
+.three{
+    transform:   translateY(-200px) rotateY(90deg);
+	box-shadow: 2px 1px 6px green;
+}
+.four{
+    transform: translateX(-400px) translateY(-200px)  rotateY(90deg);
+	box-shadow: 2px 1px 6px green;
+}
+.five {
+    transform: translateX(-200px) rotateX(90deg);
+	box-shadow: 2px 1px 6px green;
+}
+.six{
+    transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+	box-shadow: 2px 1px 6px green;
+}
